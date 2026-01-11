@@ -13,7 +13,7 @@ def get_file(filename):
         response = requests.get(remote_url, timeout=10)
         
         if response.status_code != 200:
-            return f"Error: {response.status_code}", 404
+            return f"Error {response.status_code} while reading {remote_url}", 404
         
         if len(response.content) > 1024:
             return "Error: file too large", 413
