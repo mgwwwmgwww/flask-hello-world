@@ -3,7 +3,7 @@ import requests
 from urllib.parse import urljoin
 app = Flask(__name__)
 
-REMOTE_BASE_URL = 'http://mgwww.pythonanywhere.com/'
+REMOTE_BASE_URL = 'http://mgwww.pythonanywhere.com/static'
 
 @app.route('/<path:filename>')
 def get_file(filename):
